@@ -17,7 +17,7 @@ st.title("🍽️ Zomato Consumer Trends & Rating Prediction")
 # -------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("Zomato_Data_Analytics/data/zomato.csv")
+    pd.read_csv("data/zomato.csv")
     return df
 
 df = load_data()
