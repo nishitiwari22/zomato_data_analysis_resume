@@ -8,13 +8,15 @@ import os
 
 @st.cache_data
 def load_data():
-    file_path = os.path.join("data", "zomato.csv")
-    return pd.read_csv(file_path)
-    
+    file_path = os.path.join(os.getcwd(), "data", "zomato.csv")
+
     if not os.path.exists(file_path):
-        raise FileNotFoundError(f"File not found at {file_path}")
-    
+        st.error(f"File not found at {file_path}")
+        st.stop()
+
     return pd.read_csv(file_path)
+
+df = load_data()
 
 # -------------------------------
 # PAGE CONFIG
