@@ -10,6 +10,11 @@ import os
 def load_data():
     file_path = os.path.join("data", "zomato.csv")
     return pd.read_csv(file_path)
+    
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"File not found at {file_path}")
+    
+    return pd.read_csv(file_path)
 
 # -------------------------------
 # PAGE CONFIG
