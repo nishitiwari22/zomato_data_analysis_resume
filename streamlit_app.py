@@ -4,6 +4,12 @@ import numpy as np
 import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
+@st.cache_data
+def load_data():
+    file_path = os.path.join("data", "zomato.csv")
+    return pd.read_csv(file_path)
 
 # -------------------------------
 # PAGE CONFIG
