@@ -1,0 +1,58 @@
+## Q6: You mentioned accuracy = 65%. How did you calculate it?
+
+👉 VERY IMPORTANT
+
+### ✅ Strong Answer:
+
+> I split the dataset into training and testing sets using train_test_split. After training the model, I evaluated it on unseen test data using accuracy_score from sklearn, which calculates the percentage of correct predictions.
+> 
+
+---
+
+## ❓ Q7: Why is accuracy not always a good metric?
+
+👉 Depth check
+
+### ✅ Strong Answer:
+
+> Accuracy can be misleading in imbalanced datasets. For example, if 90% of data belongs to one class, predicting only that class gives high accuracy but poor performance. In such cases, precision, recall, and F1-score are better metrics.
+> 
+
+---
+
+## ❓ Q8: What other metrics did you consider?
+
+### ✅ Strong Answer:
+
+> Depending on the problem:
+> 
+- Precision → when false positives matter
+- Recall → when false negatives matter
+- F1-score → balance between precision and recall
+- RMSE → for regression tasks
+
+---
+
+## ❓ Q9: Your RMSE is 26%. What does that mean?
+
+👉 Many candidates fail here
+
+### ✅ Strong Answer:
+
+> RMSE measures the average error between predicted and actual values. A value of 26 means that on average, my predictions deviate by 26 units from actual values. Lower RMSE indicates better model performance.
+> 
+
+---
+
+## ❓ Q10: How do you validate your model is correct?
+
+👉 VERY IMPORTANT
+
+### ✅ Strong Answer:
+
+> I validate using:
+> 
+- Train-test split to ensure generalization
+- Cross-validation for robustness
+- Checking for overfitting (train vs test performance gap)
+- Evaluating multiple metrics instead of relying on one
